@@ -1,0 +1,33 @@
+{
+  "name": "cypress-bdd-automation",
+  "version": "1.0.0",
+  "description": "Cypress automation with BDD-Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolof2000/Cypress-BDD-Cucumber-Automation.git"
+  },
+  "keywords": [
+    "Cypress",
+    "BDD",
+    "Cucumber"
+  ],
+  "author": "Victor Bolofinde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bolof2000/Cypress-BDD-Cucumber-Automation/issues"
+  },
+  "homepage": "https://github.com/bolof2000/Cypress-BDD-Cucumber-Automation#readme",
+  "dependencies": {
+    "cypress": "^8.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "prettier": "^2.4.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
