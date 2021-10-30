@@ -24,3 +24,4 @@ class BasePage {
     cy.log(message)
   }
 }
+export default BasePage

@@ -10,6 +10,7 @@ const emailForForgotPasswordLocator = '#user_email'
 const sendforgotPasswordLocator = 'Send Password'
 const emailSentMessageLocator = 'Your password will be sent to the following email:'
 const errorMessageForFailedLoginAttempt = 'Login and/or password are wrong.'
+import BasePage from '../../page-objects/pages/BasePage'
 
 class LoginPage extends BasePage{
 
@@ -19,7 +20,7 @@ class LoginPage extends BasePage{
     cy.wait(1000)
     cy.get(usernameLocator).type(username)
     cy.get(passwordLocator).type(password)
-    cy.get(signInButtonLocator).click()
+    cy.contains(signInButtonLocator).click()
   }
 
   static loginRememberMe(username,password){

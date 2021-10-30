@@ -1,10 +1,12 @@
-import {url} from '../../../config'
+//import {url} from '../../../config'
 import Navbar from "../../page-objects/components/Navbar";
 import LoginPage from "../../page-objects/pages/LoginPage";
+import HomePage from "../../page-objects/pages/HomePage";
 
 //todo write each tests in a describe statement
 
 //todo Invalid login attempt
+const url = 'http://zero.webappsecurity.com/index.html'
 
 describe('Invalid Login Attempt',()=> {
   before(function() {
@@ -34,11 +36,6 @@ describe('valid login',() =>{
     LoginPage.login('username','password')
   });
 
-  //todo verify user is logon
-  it("should successfully logon", function() {
-
-
-  });
 
 })
 
