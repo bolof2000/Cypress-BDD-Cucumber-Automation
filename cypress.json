@@ -1,6 +1,15 @@
 {
-  "video": true,
+  "video": false,
+  "chromeWebSecurity": false,
   "defaultCommandTimeout": 5000,
   "pageLoadTimeout": 60000,
-  "ignoreTestFiles": ["*.js","*.md"]
+  "ignoreTestFiles": [
+    "*.js",
+    "*.md"
+  ],
+  "watchForFileChanges": true,
+  "viewportWidth": 1000,
+  "viewportHeight": 660,
+  "execTimeout": 60000,
+  "projectId": "kuzafy"
 }

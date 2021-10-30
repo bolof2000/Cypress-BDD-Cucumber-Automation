@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:test": "cypress run"
+    "cy:test": "cypress run",
+    "cy:run": "cypress run",
+    "cy:update-snapshots": "cypress run --env updateSnapshots=true",
+    "cy:run-dashboard": "cypress run --record --key d5440505-a31f-4353-8f8a-c1ff69d529fb"
   },
   "repository": {
     "type": "git",
@@ -25,13 +28,15 @@
   "dependencies": {
     "cypress": "^8.7.0",
     "cypress-cucumber-preprocessor": "^4.3.0",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "cypress-image-snapshot": "^4.0.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "stepDefinitions": "cypress/integration/features/step_definitions"
   },
   "devDependencies": {
-    "cucumber": "^7.0.0-rc.0"
+    "cucumber": "^7.0.0-rc.0",
+    "cypress-image-snapshot": "^4.0.1"
   }
 }
