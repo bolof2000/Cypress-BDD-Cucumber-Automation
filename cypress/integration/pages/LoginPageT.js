@@ -10,7 +10,7 @@ const INVALID_LOGIN_MESSAGE = 'Login and/or password are wrong. '
 
 
 
-class LoginPage {
+class LoginPageT {
   static launchUrl(){
     cy.visit('http://zero.webappsecurity.com/index.html')
     cy.get(SIGNIN_LOCATOR).click()
@@ -27,4 +27,4 @@ class LoginPage {
   }
 }
 
-export default LoginPage
+export default LoginPageT
