@@ -15,12 +15,14 @@ const SIGNINLOCATOR = '#Sign In'
 const CONTINUE_LOCATOR = '#Continue';
 const VERIFY_SIGNIN_LOCATOR = '#SRepositories'
 const SEARCH_LOCATOR = '#[data-testid="autocompleteInput"]'
+const SEARCH_RESULT_LOCATOR = '#["searchResults"]'
 
 class  SignUpPage extends BasePage{
 
     static search(searchTerm){
     
         cy.get(SEARCH_LOCATOR).type('{backspace}')
+
     }
 
 
@@ -80,9 +82,12 @@ class  SignUpPage extends BasePage{
         cy.get(SIGNINLOCATOR).click()
     }
 
-    static verifyLogin(){
+    static verifySignUp(){
         cy.contains(VERIFY_SIGNIN_LOCATOR).should('be.visible')
     }
 
+  static verifySearchResult(searchTerm){
+    cy.get(SEARCH_RESULT_LOCATOR).contains(searchTerm).should('be.visible')
+  }
 
 }

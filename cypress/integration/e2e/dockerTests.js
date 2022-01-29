@@ -15,10 +15,11 @@ describe('Signup Attempt',()=> {
     DockerHomePage.invalidLogin();
   });
 
+  
   // this should verify a successful signup attempt if no recpatcha is required 
   it("should verify successful signup attempt", function() {
     DockerHomePage.signUp("lesley001","ovbolofinde@gmail.com","Testman2k")
-    DockerHomePage.validLogin();
+    DockerHomePage.verifySingUp();
   });
 
 })
@@ -33,11 +34,23 @@ describe('Login Attempt',() =>{
   //todo user login
   it("should verify successful  login by user", function() {
     DockerHomePage.login("lesley001","Testman2k")
-    DockerHomePag.verifyLogin();
+    DockerHomePage.verifyLogin();
   });
 
-  
+  it ("should verify login failed by user", function() {
+    DockerHomePage.login("lesley001","Testman2k")
+    DockerHomePage.invalidLogin();
+  });
 
+})
+
+
+describe ('verify search results',() =>{ 
+
+  it ('should verify search results',() =>{
+    DockerHomePage.search('nodejs')
+    DockerHomePage.verifySearchResults('nodejs');
+  });
 })
 
 
