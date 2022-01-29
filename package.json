@@ -27,16 +27,16 @@
   "homepage": "https://github.com/bolof2000/Cypress-BDD-Cucumber-Automation#readme",
   "dependencies": {
     "cypress": "^8.7.0",
-    "cypress-cucumber-preprocessor": "^4.3.0",
-    "prettier": "^2.4.1",
-    "cypress-image-snapshot": "^4.0.1"
+    "cypress-image-snapshot": "^4.0.1",
+    "prettier": "^2.4.1"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false,
+    "nonGlobalStepDefinitions": true,
     "stepDefinitions": "cypress/integration/features/step_definitions"
   },
   "devDependencies": {
     "cucumber": "^7.0.0-rc.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-image-snapshot": "^4.0.1"
   }
 }
